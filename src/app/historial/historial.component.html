@@ -1,0 +1,10 @@
+<h2>Historial</h2>
+
+<ul *ngFor="let user of usuarios">
+  <li>{{user.getNombre()}} es {{user.getSexo()}} y </li>
+  <p *ngIf="user.getIndice()<=18">esta delgado</p>
+  <p *ngIf="user.getIndice()>18 && user.getIndice()<25">esta ideal</p>
+  <p *ngIf="user.getIndice()>=25 && user.getIndice()<30">esta gordo</p>
+  <p *ngIf="user.getIndice()>=30">esta OBESO</p>
+</ul>
+
